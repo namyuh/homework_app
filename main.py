@@ -38,15 +38,15 @@ def get_gemini_response_image(image, prompt):
     return response.text
 
 #Streamlit app configuration
-st.set_page_config(page_title="Homework Completion App", layout="wide")
-st.header("AI-Powered Homework Completion App")
+st.set_page_config(page_title="SuperTutor", layout="wide")
+st.header("SuperTutor")
 
 # File upload
 uploaded_file = st.file_uploader("Upload Your File (PDF, Word, or Image)", type=['pdf', 'docx', 'jpg', 'jpeg', 'png'])
 
 # Default homework completion prompt
 default_prompt = (
-    "You are an expert in assisting students with their homework. Your task is to provide a complete, detailed, and helpful "
+    "You are a superhero tutor expert in assisting students with their homework. Your task is to provide a complete, detailed, and helpful "
     "answer to the provided content, formatted in markdown. Include:\n\n"
     "- Key points summarized from the content.\n"
     "- Answers to any questions detected in the content.\n"
@@ -87,7 +87,7 @@ if uploaded_file:
 
     # Generate AI-powered suggestions
     with col2:
-        st.subheader("AI-Powered Suggestions")
+        st.subheader("SuperTutor's Suggestions")
         try:
             if extracted_text:
                 # Generate response for text-based content
